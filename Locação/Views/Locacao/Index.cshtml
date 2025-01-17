@@ -1,0 +1,28 @@
+﻿@model IEnumerable<LocacaoModel>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Locatario</th>
+            <th scope="col">Locador</th>
+            <th scope="col">Ferramenta Emprestada</th>
+            <th scope="col">Ultima Atualização</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model != null){
+            @foreach(var locacao in Model){
+                <tr>
+                    <th scope="row">@locacao.Locatario</th>
+                    <td>@locacao.Locatario</td>
+                    <td>@locacao.FerramentaEmprestada</td>
+                    <td>@locacao.DataUltimaAtualizacao</td>
+                </tr>
+            }
+
+            
+        }
+      
+    </tbody>
+</table>
