@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<LocacaoModel>
 
 
-<table class="table table-hover">
+<table class="table table-dark table table-hover">
     <thead>
         <tr>
             <th scope="col">Locatario</th>
@@ -15,7 +15,7 @@
             @foreach(var locacao in Model){
                 <tr>
                     <th scope="row">@locacao.Locatario</th>
-                    <td>@locacao.Locatario</td>
+                    <td>@locacao.Locador</td>
                     <td>@locacao.FerramentaEmprestada</td>
                     <td>@locacao.DataUltimaAtualizacao</td>
                 </tr>
