@@ -18,5 +18,10 @@ namespace Locacao.Controllers
 			IEnumerable<LocacaoModel> locacao = _db.Locacao;
 			return View(locacao);
 		}
+
+		public IActionResult Cadastrar()
+		{
+			return View();
+		}
 	}
 }
