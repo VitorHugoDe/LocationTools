@@ -23,5 +23,20 @@ namespace Locacao.Controllers
 		{
 			return View();
 		}
+
+		[HttpPost]
+
+		public IActionResult Cadastrar(LocacaoModel locacao)
+		{
+			if (ModelState.IsValid)
+			{
+				_db.Locacao.Add(locacao);
+				_db.SaveChanges();
+
+				return RedirectToAction("Index");
+			}
+
+			return View();
+		}
 	}
 }

@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model LocacaoModel;
 @{
     ViewData["litle"] = "Cadastar Locação";
 
@@ -13,28 +11,28 @@
     </div>
 
 
-<form>
+<form method="post" asp-controller="Locacao" asp-action="Cadastrar">
 
 
     <div class="mb-3">
         <label for="Locatário" class="form-label text-light">Locatário</label>
-        <input type="text" class="form-control" id="Locatário" placeholder="Quem está locando o material?">
+        <input type="text" class="form-control" asp-for="Locatario" id="Locatário" placeholder="Quem está locando o material?">
     </div>
 
 
     <div class="mb-3">
-            <label for="Locatário" class="form-label text-light">Locador</label>
-        <input type="text" class="form-control" id="Locátario" placeholder="Quem está locando o maquinário ?">
+            <label for="Locador" class="form-label text-light">Locador</label>
+        <input type="text" class="form-control" asp-for="Locador" id="Locador" placeholder="Quem está locando o maquinário ?">
     </div>
 
     <div class="mb-3">
             <label for="Maquina" class="form-label text-light">Maquinário</label>
-            <input type="text" class="form-control" id="Maquina" placeholder="Qual maquinário está sendo emprestado?">
+            <input type="text" class="form-control" asp-for="FerramentaEmprestada" id="Maquina" placeholder="Qual maquinário está sendo emprestado?">
     </div>
 
     <div class="d-flex gap-5 mt-5">
         <button type="submit" class="btn btn-success w-50">Adicionar</button>
-        <a class="btn btn-primary w-50">Voltar</a>
+        <a class="btn btn-primary w-50" asp-controller="Locacao" asp-action="Index">Voltar</a>
     </div>
 
     
