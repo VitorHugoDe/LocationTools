@@ -1,0 +1,46 @@
+﻿@model LocacaoModel;
+@{
+    ViewData["litle"] = "Editar Locação";
+
+}
+
+<div class="container bg-dark p-5 rounded-5">
+
+    <div class="mb-5 text-center text-light"
+        <h1 class="">Edição de Locação</h1>
+    </div>
+
+
+    <form method="post" asp-controller="Locacao" asp-action="Editar">
+        <input type="hidden" asp-for=Id/>
+
+        <div class="mb-3">
+            <label for="Locatário" class="form-label text-light">Locatário</label>
+            <input type="text" class="form-control" asp-for="Locatario" id="Locatário" placeholder="Quem está locando o material?">
+            <span class="text-danger" asp-validation-for="Locatario"></span>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="Locador" class="form-label text-light">Locador</label>
+            <input type="text" class="form-control" asp-for="Locador" id="Locador" placeholder="Quem está locando o maquinário ?">
+            <span class="text-danger" asp-validation-for="Locador"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="Maquina" class="form-label text-light">Maquinário</label>
+            <input type="text" class="form-control" asp-for="FerramentaEmprestada" id="Maquina" placeholder="Qual maquinário está sendo emprestado?">
+            <span class="text-danger" asp-validation-for="FerramentaEmprestada"></span>
+        </div>
+
+        <div class="d-flex gap-5 mt-5">
+            <button type="submit" class="btn btn-success w-50">Adicionar</button>
+            <a class="btn btn-primary w-50" asp-controller="Locacao" asp-action="Index">Voltar</a>
+        </div>
+
+
+
+
+    </form>
+</div>
+

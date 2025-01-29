@@ -17,17 +17,20 @@
     <div class="mb-3">
         <label for="Locatário" class="form-label text-light">Locatário</label>
         <input type="text" class="form-control" asp-for="Locatario" id="Locatário" placeholder="Quem está locando o material?">
+        <span class="text-danger" asp-validation-for="Locatario"></span>
     </div>
 
 
     <div class="mb-3">
             <label for="Locador" class="form-label text-light">Locador</label>
         <input type="text" class="form-control" asp-for="Locador" id="Locador" placeholder="Quem está locando o maquinário ?">
+        <span class="text-danger" asp-validation-for="Locador"></span>
     </div>
 
     <div class="mb-3">
             <label for="Maquina" class="form-label text-light">Maquinário</label>
             <input type="text" class="form-control" asp-for="FerramentaEmprestada" id="Maquina" placeholder="Qual maquinário está sendo emprestado?">
+            <span class="text-danger" asp-validation-for="FerramentaEmprestada"></span>
     </div>
 
     <div class="d-flex gap-5 mt-5">

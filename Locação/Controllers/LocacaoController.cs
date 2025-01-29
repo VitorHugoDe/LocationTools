@@ -19,11 +19,29 @@ namespace Locacao.Controllers
 			return View(locacao);
 		}
 
+		[HttpGet]
+
 		public IActionResult Cadastrar()
 		{
 			return View();
 		}
 
+		[HttpGet]
+		public IActionResult Editar(int? id)
+		{
+			if (id == null || id == 0) {
+				return NotFound();
+			}
+			LocacaoModel locacao = _db.Locacao.FirstOrDefault(x => x.Id == id);
+
+			if(locacao == null)
+			{
+				return NotFound();
+			}
+
+			return View(locacao);
+		}
+		
 		[HttpPost]
 
 		public IActionResult Cadastrar(LocacaoModel locacao)
